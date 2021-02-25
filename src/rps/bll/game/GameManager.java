@@ -1,11 +1,10 @@
 package rps.bll.game;
 
 //Java imports
+import java.util.ArrayList;
 
 //Project imports
 import rps.bll.player.IPlayer;
-
-import java.util.ArrayList;
 
 /**
  *
@@ -13,7 +12,6 @@ import java.util.ArrayList;
 public class GameManager {
 
     private IGameState gameState;
-
     private IPlayer bot;
     private IPlayer human;
 

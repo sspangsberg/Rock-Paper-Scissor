@@ -1,15 +1,10 @@
 package rps;
 
-// Project imports
-import rps.bll.game.Move;
-import rps.bll.game.GameManager;
-import rps.bll.player.AdvancedAiPlayer;
 import rps.bll.player.IPlayer;
 import rps.bll.player.Player;
 import rps.bll.player.PlayerType;
-
-//Java imports
-import java.util.Scanner;
+import rps.gui.ConsoleApp;
+import rps.gui.JavaFXApp;
 
 public class Main {
 
@@ -19,52 +14,31 @@ public class Main {
      */
     public static void main(String[] args)
     {
-        System.out.print("Welcome to the classic Rock, Paper and Scissors game!");
-        System.out.println();
+        //Console version
+        //startRPSConsoleGame();
 
-        IPlayer human = new Player("Mr. Spangsberg", PlayerType.Human);
-        IPlayer r2d2 = new AdvancedAiPlayer("AdvancedAIPlayer", PlayerType.AI);
-
-        GameManager ge = new GameManager(human, r2d2);
-
-        while (true) {
-            String playerMove = getPlayerMove();
-
-            if (playerMove.toLowerCase().equals("exit"))
-                break;
-
-            ge.playRound(Move.valueOf(playerMove));
-
-            ge.getGameState().getHistoricResults().forEach((result) -> {
-                System.out.println(result);
-            });
-        }
+        //GUI version
+        startRPSJavaFXGame();
     }
 
+
     /**
-     * Ask the human player to make a move...
-     *
-     * @return Rock, Paper or Scissor as String
+     * Start the GUI (JavaFX) version of the game
      */
-    public static String getPlayerMove() {
-        Scanner keyboard = new Scanner(System.in);
-        String input;
-        boolean inputOK = false;
+    private static void startRPSJavaFXGame() {
+        JavaFXApp.launch();
+    }
 
-        do {
-            inputOK = false;
-            System.out.println();
-            System.out.print("Choose Your Weapon (Rock, Paper or Scissor) or Exit to quit the game: ");
-            input = keyboard.next();
 
-            if ((input.toLowerCase().equals("rock")) || (input.toLowerCase().equals("paper")) ||
-                (input.toLowerCase().equals("scissor")) || (input.toLowerCase().equals("exit"))) {
-                inputOK = true;
-            }
-        }
-        while (!inputOK);
+    /**
+     * Start a console version of the game
+     */
+    public static void startRPSConsoleGame() {
+        IPlayer human = new Player("Luke Skywalker", PlayerType.Human);
+        IPlayer r2d2 = new Player("R2D2", PlayerType.AI);
 
-        return input;
+        ConsoleApp c = new ConsoleApp(human, r2d2);
+        c.runGame();
     }
 }
 

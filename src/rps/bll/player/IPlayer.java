@@ -7,7 +7,7 @@ import rps.bll.game.Move;
 public interface IPlayer {
 
     /**
-     *
+     * Returns the name of the player
      * @return
      */
     public String getPlayerName();

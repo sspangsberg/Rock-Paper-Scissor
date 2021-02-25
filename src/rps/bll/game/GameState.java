@@ -7,12 +7,16 @@ import java.util.ArrayList;
 
 public class GameState implements IGameState {
 
-    private ArrayList<Result> historicMoves;
+    private ArrayList<Result> historicResults;
     private int roundNumber;
 
-
-    public GameState(ArrayList<Result> historicMoves, int roundNumber) {
-        this.historicMoves = new ArrayList<>();
+    /**
+     *
+     * @param historicResults
+     * @param roundNumber
+     */
+    public GameState(ArrayList<Result> historicResults, int roundNumber) {
+        this.historicResults = new ArrayList<>();
         this.roundNumber = roundNumber;
     }
 
@@ -28,6 +32,6 @@ public class GameState implements IGameState {
 
     @Override
     public ArrayList<Result> getHistoricResults() {
-        return historicMoves;
+        return historicResults;
     }
 }

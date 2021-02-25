@@ -1,15 +1,17 @@
 package rps.bll.game;
 
+// Project imports
 import rps.bll.player.IPlayer;
 
-public class Result {
 
+public class Result {
     private ResultStatus status;
     private Move winnerMove;
     private IPlayer winnerPlayer;
     private Move loserMove;
     private IPlayer loserPlayer;
     private int roundNumber;
+
 
     /**
      * Initializes a new Result with a winner, loser and their moves
@@ -49,14 +51,11 @@ public class Result {
         return roundNumber;
     }
 
-    public void setRoundNumber(int roundNumber) {
-        this.roundNumber = roundNumber;
+    public ResultStatus getStatus() {
+        return status;
     }
 
-    @Override
-    public String toString() {
-        String statusText = status == ResultStatus.Win ? "wins over " : "ties ";
-
-        return "Round #" + roundNumber + ":" + winnerPlayer.getPlayerName() + " (" + winnerMove + ") " + statusText + loserPlayer.getPlayerName() + " (" + loserMove + ")!";
+    public void setStatus(ResultStatus status) {
+        this.status = status;
     }
 }

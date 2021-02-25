@@ -3,9 +3,10 @@ package rps.bll.player;
 //Project imports
 import rps.bll.game.IGameState;
 import rps.bll.game.Move;
+import rps.bll.game.Result;
 
 //Java imports
-import java.util.Random;
+import java.util.ArrayList;
 
 
 public class Player implements IPlayer {
@@ -21,14 +22,12 @@ public class Player implements IPlayer {
         this.type = type;
     }
 
-    /**
-     *
-     * @return
-     */
+
     @Override
     public String getPlayerName() {
         return name;
     }
+
 
     @Override
     public PlayerType getPlayerType() {
@@ -37,14 +36,16 @@ public class Player implements IPlayer {
 
 
     /**
-     *
-     * @param state
-     * @return
+     * Decides the next move for the bot...
+     * @param state Contains the current game state including historic moves/results
+     * @return Next move
      */
     @Override
     public Move doMove(IGameState state) {
-        //Implement some fancy advanced AI here...
-        Random random = new Random();
-        return Move.values()[random.nextInt(Move.values().length)];
+        //Historic data to analyze and decide next move...
+        ArrayList<Result> results = state.getHistoricResults();
+
+        //Implement better AI here...
+        return Move.Rock;
     }
 }
