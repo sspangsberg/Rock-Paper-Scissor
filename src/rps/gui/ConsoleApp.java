@@ -36,10 +36,11 @@ public class ConsoleApp {
         while (true) {
             String playerMove = getPlayerMove();
 
-            if (playerMove.toLowerCase().equals("exit"))
+            if (playerMove.equalsIgnoreCase("exit"))
                 break;
 
             ge.playRound(Move.valueOf(playerMove));
+
             ge.getGameState().getHistoricResults().forEach((result) -> {
                 System.out.println(getResultAsString(result));
             });
@@ -78,7 +79,7 @@ public class ConsoleApp {
     public String getPlayerMove() {
         Scanner keyboard = new Scanner(System.in);
         String input;
-        boolean inputOK = false;
+        boolean inputOK;
 
         do {
             inputOK = false;
@@ -86,16 +87,16 @@ public class ConsoleApp {
             System.out.print("Choose Your Weapon (Rock/R, Paper/P or Scissor/S) or Exit/E to quit the game: ");
             input = keyboard.next();
 
-            if (input.toLowerCase().equals("rock") || input.toLowerCase().equals("r") ||
-                input.toLowerCase().equals("paper") || input.toLowerCase().equals("p") ||
-                input.toLowerCase().equals("scissor") || input.toLowerCase().equals("s") ||
-                input.toLowerCase().equals("exit") || input.toLowerCase().equals("e")) {
+            if (input.equalsIgnoreCase("rock") || input.equalsIgnoreCase("r") ||
+                input.equalsIgnoreCase("paper") || input.equalsIgnoreCase("p") ||
+                input.equalsIgnoreCase("scissor") || input.equalsIgnoreCase("s") ||
+                input.equalsIgnoreCase("exit") || input.equalsIgnoreCase("e")) {
                 inputOK = true;
 
-                if (input.toLowerCase().equals("r")) { input = "Rock"; }
-                else if (input.toLowerCase().equals("p")) { input = "Paper"; }
-                else if (input.toLowerCase().equals("s")) { input = "Scissor"; }
-                else if (input.toLowerCase().equals("e")) { input = "Exit"; }
+                if (input.equalsIgnoreCase("r")) { input = "Rock"; }
+                else if (input.equalsIgnoreCase("p")) { input = "Paper"; }
+                else if (input.equalsIgnoreCase("s")) { input = "Scissor"; }
+                else if (input.equalsIgnoreCase("e")) { input = "Exit"; }
             }
             else { System.out.println("Invalid input. Try again :)"); }
         }
@@ -105,6 +106,8 @@ public class ConsoleApp {
     }
 
     /**
+     * Provides a custom formatted string representation of a Result
+     *
      * @param result
      * @return
      */
