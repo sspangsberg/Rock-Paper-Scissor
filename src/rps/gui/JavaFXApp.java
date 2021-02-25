@@ -7,6 +7,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * JavaFX implementation of the RPS game
+ *
+ * @author smsj
+ */
 public class JavaFXApp extends Application {
 
     public static void launch() {

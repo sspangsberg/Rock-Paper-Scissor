@@ -4,6 +4,11 @@ package rps.bll.player;
 import rps.bll.game.IGameState;
 import rps.bll.game.Move;
 
+/**
+ * Defines a Player in the game including its strategy (doMove())
+ *
+ * @author smsj
+ */
 public interface IPlayer {
 
     /**

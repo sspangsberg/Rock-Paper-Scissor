@@ -2,6 +2,11 @@ package rps.bll.game;
 
 import java.util.ArrayList;
 
+/**
+ * Interface definition for the RPS game state
+ *
+ * @author smsj
+ */
 public interface IGameState {
 
     /**

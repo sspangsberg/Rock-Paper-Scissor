@@ -1,28 +1,35 @@
 package rps.gui;
 
 // Project imports
-
-import rps.bll.game.GameManager;
-import rps.bll.game.Move;
-import rps.bll.game.Result;
-import rps.bll.game.ResultStatus;
-import rps.bll.player.IPlayer;
+import rps.bll.game.*;
+import rps.bll.player.*;
 
 // Java imports
+import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Console implementation of the RPS game
+ *
+ * @author smsj
+ */
 public class ConsoleApp {
 
-    IPlayer human;
-    IPlayer bot;
-
-    public ConsoleApp(IPlayer human, IPlayer bot) {
-        this.human = human;
-        this.bot = bot;
-    }
-
-    public void runGame() {
+    /**
+     * Starts the game
+     */
+    public void startGame() {
         System.out.println("Welcome to the classic Rock, Paper and Scissors game!");
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("Please type in your player name: ");
+        String playerName = keyboard.next();
+
+        IPlayer human = new Player(playerName, PlayerType.Human);
+        IPlayer bot = new Player(getRandomBotName(), PlayerType.AI);
+
+        System.out.println("Your opponent is " + bot.getPlayerName());
+        System.out.println("Starting game.... good luck both!");
 
         GameManager ge = new GameManager(human, bot);
 
@@ -37,7 +44,31 @@ public class ConsoleApp {
                 System.out.println(getResultAsString(result));
             });
         }
+
+        if (ge.getGameState().getHistoricResults().size() > 0)
+            System.out.println("Game stats: ....ehmmmm..not implemented yet...please FIXME");
     }
+
+
+    /**
+     * Famous robots...
+     * @return
+     */
+    private String getRandomBotName() {
+        String[] botNames = new String[] {
+                "R2D2",
+                "Mr. Data",
+                "3PO",
+                "Bender",
+                "Marvin the Paranoid Android",
+                "Bishop",
+                "Robot B-9",
+                "HAL"
+        };
+        int randomNumber = new Random().nextInt(botNames.length - 1);
+        return botNames[randomNumber];
+    }
+
 
     /**
      * Ask the human player to make a move...

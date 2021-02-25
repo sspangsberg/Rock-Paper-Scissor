@@ -3,7 +3,11 @@ package rps.bll.game;
 // Project imports
 import rps.bll.player.IPlayer;
 
-
+/**
+ * Defines a Result in the game
+ *
+ * @author smsj
+ */
 public class Result {
     private ResultStatus status;
     private Move winnerMove;

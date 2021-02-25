@@ -5,6 +5,11 @@ package rps.bll.game;
 //Java imports
 import java.util.ArrayList;
 
+/**
+ * Keeps track of game state including historic results
+ *
+ * @author smsj
+ */
 public class GameState implements IGameState {
 
     private ArrayList<Result> historicResults;

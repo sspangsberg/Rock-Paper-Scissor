@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import rps.bll.player.IPlayer;
 
 /**
+ * Manages game state and logic etc.
  *
+ * @author smsj
  */
 public class GameManager {
 

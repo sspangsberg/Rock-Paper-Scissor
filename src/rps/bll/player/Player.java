@@ -8,7 +8,11 @@ import rps.bll.game.Result;
 //Java imports
 import java.util.ArrayList;
 
-
+/**
+ * Example implementation of a player.
+ *
+ * @author smsj
+ */
 public class Player implements IPlayer {
 
     private String name;
