@@ -112,7 +112,7 @@ public class ConsoleApp {
      * @return
      */
     public String getResultAsString(Result result) {
-        String statusText = result.getStatus() == ResultStatus.Win ? "wins over " : "ties ";
+        String statusText = result.getType() == ResultType.Win ? "wins over " : "ties ";
 
         return "Round #" + result.getRoundNumber() + ":" +
                 result.getWinnerPlayer().getPlayerName() +

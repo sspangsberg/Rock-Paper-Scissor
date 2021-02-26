@@ -5,7 +5,7 @@ package rps.bll.game;
  *
  * @author smsj
  */
-public enum ResultStatus {
+public enum ResultType {
     Win,
     Tie
 }

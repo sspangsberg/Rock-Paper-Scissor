@@ -9,7 +9,7 @@ import rps.bll.player.IPlayer;
  * @author smsj
  */
 public class Result {
-    private ResultStatus status;
+    private ResultType type;
     private Move winnerMove;
     private IPlayer winnerPlayer;
     private Move loserMove;
@@ -18,20 +18,20 @@ public class Result {
 
 
     /**
-     * Initializes a new Result with a winner, loser and their moves
+     * Initializes a new Result with a winner, loser, their moves and a type
      * @param winnerPlayer
      * @param winnerMove
      * @param loserPlayer
      * @param loserMove
-     * @param status
+     * @param type
      * @param roundNumber
      */
-    public Result(IPlayer winnerPlayer, Move winnerMove, IPlayer loserPlayer, Move loserMove, ResultStatus status, int roundNumber) {
+    public Result(IPlayer winnerPlayer, Move winnerMove, IPlayer loserPlayer, Move loserMove, ResultType type, int roundNumber) {
         this.winnerPlayer = winnerPlayer;
         this.winnerMove = winnerMove;
         this.loserPlayer = loserPlayer;
         this.loserMove = loserMove;
-        this.status = status;
+        this.type = type;
         this.roundNumber = roundNumber;
     }
 
@@ -55,11 +55,7 @@ public class Result {
         return roundNumber;
     }
 
-    public ResultStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(ResultStatus status) {
-        this.status = status;
+    public ResultType getType() {
+        return type;
     }
 }

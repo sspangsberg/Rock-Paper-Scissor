@@ -41,13 +41,13 @@ public class GameManager {
 
         //Rules
         if (human_move == bot_move)
-            result = new Result(human, human_move, bot, bot_move, ResultStatus.Tie, roundNumber);
+            result = new Result(human, human_move, bot, bot_move, ResultType.Tie, roundNumber);
         else if ((human_move == Move.Rock && bot_move == Move.Scissor) ||
                 (human_move == Move.Scissor && bot_move == Move.Paper) ||
                 (human_move == Move.Paper && bot_move == Move.Rock)) {
-            result = new Result(human, human_move, bot, bot_move, ResultStatus.Win, roundNumber);
+            result = new Result(human, human_move, bot, bot_move, ResultType.Win, roundNumber);
         } else {
-            result = new Result(bot, bot_move, human, human_move, ResultStatus.Win, roundNumber);
+            result = new Result(bot, bot_move, human, human_move, ResultType.Win, roundNumber);
         }
 
         gameState.setRoundNumber(++roundNumber);
