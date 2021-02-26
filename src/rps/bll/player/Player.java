@@ -47,7 +47,7 @@ public class Player implements IPlayer {
     @Override
     public Move doMove(IGameState state) {
         //Historic data to analyze and decide next move...
-        ArrayList<Result> results = state.getHistoricResults();
+        ArrayList<Result> results = (ArrayList<Result>) state.getHistoricResults();
 
         //Implement better AI here...
         return Move.Rock;

@@ -19,7 +19,7 @@ public class ConsoleApp {
      * Starts the game
      */
     public void startGame() {
-        System.out.println("Welcome to the classic Rock, Paper and Scissors game!");
+        System.out.println("Welcome to the classic Rock, Paper and Scissor game!");
         Scanner keyboard = new Scanner(System.in);
 
         System.out.print("Please type in your player name: ");

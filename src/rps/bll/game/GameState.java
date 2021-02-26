@@ -3,7 +3,9 @@ package rps.bll.game;
 //Project imports
 
 //Java imports
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Keeps track of game state including historic results

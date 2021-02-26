@@ -1,6 +1,7 @@
 package rps.bll.game;
 
-import java.util.ArrayList;
+//Java imports
+import java.util.Collection;
 
 /**
  * Interface definition for the RPS game state
@@ -23,8 +24,8 @@ public interface IGameState {
 
 
     /**
-     * Returns a list of the previous Results in the game
+     * Returns a collection of the previous Results in the game
      * @return
      */
-    ArrayList<Result> getHistoricResults();
+    Collection<Result> getHistoricResults();
 }
