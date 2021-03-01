@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="611.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rps.gui.controller.GameViewController">
+<AnchorPane prefHeight="611.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rps.gui.controller.GameViewController">
    <children>
       <VBox prefHeight="625.0" prefWidth="745.0">
          <children>
@@ -54,9 +54,9 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GAME STATE" />
                   <HBox alignment="CENTER" prefHeight="315.0" prefWidth="744.0" spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="bodybg" stylesheets="@../CSS/rock.css" />
+                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="bodybg" stylesheets="@../CSS/paper.css" />
+                        <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="160.0" styleClass="bodybg" stylesheets="@../CSS/scissors.css" />
                      </children>
                   </HBox>
                </children>
