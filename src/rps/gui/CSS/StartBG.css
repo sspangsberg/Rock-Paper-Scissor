@@ -1,0 +1,4 @@
+.bodybg{
+    -fx-background-image: url("../images/RPS-BG.jpg");
+    -fx-background-size: 100% 100%;
+}
