@@ -19,10 +19,10 @@ public class Main {
     public static void main(String[] args)
     {
         //Console version
-        startRPSConsoleGame();
+        //startRPSConsoleGame();
 
         //JavaFX version
-        //startRPSJavaFXGame();
+        startRPSJavaFXGame();
     }
 
     /**
