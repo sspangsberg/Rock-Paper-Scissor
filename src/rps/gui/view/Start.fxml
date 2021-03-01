@@ -15,7 +15,7 @@
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Name:" />
                   <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="201.0" />
-                  <Button mnemonicParsing="false" text="Fight!" />
+                  <Button mnemonicParsing="false" onAction="#startGame" text="Start" />
                </children>
             </HBox>
          </children>
