@@ -12,10 +12,9 @@ public class StartController {
     public void startGame(ActionEvent ae) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("../view/GameView.fxml"));
-            Stage thisStage = (Stage) ((Node) ae.getSource()).getScene().getWindow();
-            thisStage.setScene(new Scene(root));
-        }
-        catch(Exception e)    {
+            Stage stage = (Stage) ((Node) ae.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
