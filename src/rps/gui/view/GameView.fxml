@@ -9,9 +9,9 @@
       <Button layoutX="143.0" layoutY="291.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="79.0" text="Rock" />
       <Button layoutX="258.0" layoutY="291.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="79.0" text="Paper" />
       <Button layoutX="370.0" layoutY="291.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="79.0" text="Scissors" />
-      <Text layoutX="47.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super AI Bot: " />
+      <Text layoutX="449.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super AI Bot: " />
       <Text layoutX="281.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Round:" />
-      <Text layoutX="494.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: " />
+      <Text layoutX="67.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player: " />
       <Text layoutX="291.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VS" />
       <Text layoutX="143.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
       <Text layoutX="447.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
