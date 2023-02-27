@@ -14,6 +14,7 @@ import java.util.ArrayList;
  * @author smsj
  */
 public class Player implements IPlayer {
+    
 
     private String name;
     private PlayerType type;
