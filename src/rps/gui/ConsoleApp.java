@@ -18,9 +18,37 @@ public class ConsoleApp {
     /**
      * Starts the game
      */
+    public void instructions(){
+        System.out.println("------------------------------------------");
+        System.out.println("|     The Instructions are as follows    |");
+        System.out.println("------------------------------------------");
+        System.out.println("1) First of all, you need to enter your name.");
+        System.out.println("2) Then you can play the game by entering the instructions. These instructions are:");
+        System.out.println("a) Input \"R\" or \"Rock\" to choose Rock");
+        System.out.println("a) Input \"P\" or \"Paper\" to choose Paper");
+        System.out.println("a) Input \"S\" or \"Scissor\" to choose Scissor");
+        System.out.println("Now you are ready to play the Rock, Paper, Scissor game. Remember to input your name first. Best of luck");
+    }
     public void startGame() {
-        System.out.println("Welcome to the classic Rock, Paper and Scissor game!");
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("|    Welcome to the classic Rock, Paper and Scissor game!    |");
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("\n");
+        System.out.println("In ordder to know the instructions of the game. Please type \"I\" and if you want to continue without Instructions please type \"N I\"");
         Scanner keyboard = new Scanner(System.in);
+        String infoinput = keyboard.nextLine();
+        
+            
+        
+        if(infoinput.equals("I")){
+            instructions();
+        }
+        if(infoinput.equals("N I")){
+            
+        }
+       
+        
+        
 
         System.out.print("Please type in your player name: ");
         String playerName = keyboard.next();
